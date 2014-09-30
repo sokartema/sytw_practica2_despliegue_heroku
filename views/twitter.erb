@@ -1,0 +1,93 @@
+ <!DOCTYPE html>
+
+<html>
+<head>
+  <title>Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/lavish-bootstrap.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse" role="navigation">
+  <div class="navbar-header">
+
+  <img class="pull-left" src="/icons/twitter-xxl.png" alt="Icono twitter" style="width:50px; height=50px">
+  <a class="navbar-brand" href="#">Twitter Most Popular Friend</a>
+  
+
+  </div> 
+  </nav>
+
+
+  <div class="container">
+  <div class="row">
+  <div class="col-md-6">
+    <form method="post" target="/" class="form-horizontal well" role="form">
+     <div class="form-group">
+       <label for="nombre" class="col-lg-2 control-label">Nombre</label>
+        <div class="col-lg-10">
+         <input type="text" class="form-control" name="nombre"
+             placeholder="Nombre">
+      </div>
+      </div>
+      <div class="form-group">
+       <label for="numero" class="col-lg-2 control-label">NºAmigos</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" name="numero" 
+             placeholder="NºAmigos a mostrar (max 10)">
+        </div>
+      </div>
+      <div class="form-group">
+      <div class="col-lg-offset-2 col-lg-10">
+      <button type="submit" class="btn btn-default">Entrar</button>
+      </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-md-6">
+
+    <div class="jumbotron">
+    <div class="container">
+      <% if @name == '' %>
+        <p> No se ha introducido ningun usuario o es incorrecto </p>
+
+      <%end%> 
+
+      <% if @name != ''%>
+        <%if @number>10%>
+          <p id="warning"> Error, Sólo se puede mostrar hasta 10 usuarios </p>
+        <%elsif @nombreamigos.length <= 0 %>
+          <p id="warning"> Error, El usuario no existe o no tiene amigos</p>
+        <%elsif @nombreamigos.length < @number %>
+          <p id="warning">Error, El usuario tiene menos de <%= @number%> amigos</p>
+         <%end %> 
+         <%if @number<=10 && @nombreamigos.length > 0 && @nombreamigos.length > @number%>
+         <p> Los amigos mas populares del usuario <%= @name %> son: </p>
+          <ol>
+            <% @number.times do |i| %> 
+              <li id="col"><p><%= @nombreamigos[i][2]%><%= @nombreamigos[i][0]  %> con <%= @nombreamigos[i][1] %> followers. </p></li>
+            <% end %>
+          </ol>
+        <%end%>
+      <%end%>
+
+
+
+    </div>
+    </div>
+
+
+
+  </div>
+  </div>
+
+  </div>
+
+
+  <div class="navbar navbar-inverse navbar-fixed-bottom">
+    <a class="navbar-brand" href="http://www.ull.es/view/centros/etsii/Inicio/es">ETSII ULL</a>
+    <a class="navbar-brand pull-right" href="https://github.com/alu0100595727">alu0100595727 Jazer Abreu</a>
+  </div>
+</body>
+</html>
