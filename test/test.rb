@@ -9,6 +9,14 @@ include Rack::Test::Methods
 def app
   Sinatra::Application
 end
+
+before :all do
+
+	@usuario1 = "sokartema"
+	@usuario2 = ""
+	
+
+end	
  
 describe "Number cruncher" do
     
