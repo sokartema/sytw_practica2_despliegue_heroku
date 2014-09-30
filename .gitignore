@@ -1,1 +1,8 @@
+# Mac
 .DS_Store
+
+# Linux
+.*
+!.gitignore
+!.htaccess
+*~

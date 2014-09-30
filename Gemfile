@@ -4,3 +4,4 @@ gem 'twitter'
 gem "thin"
 gem "sinatra"
 gem "rake"
+gem "minitest"
