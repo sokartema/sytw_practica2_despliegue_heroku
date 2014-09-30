@@ -12,4 +12,8 @@ task :bundle do
 
 	sh "bundle install"
 
+end
+
+desc "Ejecutar test"
+task :test do
 end	
