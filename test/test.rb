@@ -10,15 +10,17 @@ def app
   Sinatra::Application
 end
 
-before :all do
+
+ 
+describe "Number cruncher" do
+
+	before :all do
 
 	@usuario1 = "sokartema"
 	@usuario2 = ""
 	
 
-end	
- 
-describe "Number cruncher" do
+    end	
     
     it "should return the factor" do
         assert_equal(16,12+4,"Resultado")
