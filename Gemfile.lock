@@ -14,8 +14,10 @@ GEM
     json (1.8.1)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
+    minitest (5.4.2)
     multipart-post (2.0.0)
     naught (1.0.0)
+    power_assert (0.1.4)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -25,6 +27,8 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
+    test-unit (3.0.1)
+      power_assert
     thin (1.6.2)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -47,7 +51,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  minitest
   rake
   sinatra
+  test-unit
   thin
   twitter
