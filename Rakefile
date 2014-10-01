@@ -1,4 +1,4 @@
-task :default => :init
+task :default => :test
 
 desc "Carga el servidor Sinatra con la aplicacion" 
 task :init do
