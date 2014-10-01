@@ -1,7 +1,7 @@
 ### Most Popular Friend / Despliegue
 
 ### Status 
-[![Build Status](https://travis-ci.org/alu0100595727/sytw_practica2_despliegue_heroku.jpg)](https://travis-ci.org/alu0100595727/sytw_practica2_despliegue_heroku)
+[![Build Status](https://travis-ci.org/alu0100595727/sytw_practica2_despliegue_heroku.svg?branch=master)](https://travis-ci.org/alu0100595727/sytw_practica2_despliegue_heroku)
 
 
 Esta aplicación permite saber cual de los amigos(following) de una persona de twitter es mas popular, basado en el numero de followers que tiene.
