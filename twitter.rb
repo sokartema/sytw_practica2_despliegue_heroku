@@ -50,7 +50,7 @@ post '/' do
       @nombreamigos = @array[1]
 
     
-       end
+      end
 
     end
    
