@@ -12,19 +12,17 @@ end
 
 
  
-describe "Number cruncher" do
+describe "Tests de pagina web y twitter" do
 
 	before :all do
 
 	@usuario1 = "sokartema"
-	@usuario2 = ""
+	@usuario2 = "nook1etrolltime"
+	@usuario3 = "sokartemafalso"
 	
 
     end	
     
-    it "should return the factor" do
-        assert_equal(16,12+4,"Resultado")
-    end
 
 	it "Carga de la web desde el servidor" do
 		get '/'
@@ -33,8 +31,10 @@ describe "Number cruncher" do
 
 	it "Comprueba el titulo de la pagina" do
 		get '/'
-		assert last_response.body.include?("<title>Inicio</title>"), "El titulo sera: Inicio"
+		assert last_response.body.include?("<title>Inicio</title>"), "El titulo tiene que ser: Inicio"
 	end
+
+
 end
 
 
