@@ -1,5 +1,9 @@
 ### Most Popular Friend / Despliegue
 
+### Status 
+[![Build Status](https://travis-ci.org/alu0100595727/sytw_practica2_despliegue_heroku.jpg)](https://travis-ci.org/alu0100595727/sytw_practica2_despliegue_heroku)
+
+
 Esta aplicación permite saber cual de los amigos(following) de una persona de twitter es mas popular, basado en el numero de followers que tiene.
 
 Este proyecto ha sido implementado para el despliegue en heroku y contiene tests con seguimiento en travis.
@@ -28,4 +32,3 @@ Para arrancar los test ejecutar `rake test`
 **Javier Clemente -> alu0100505023**
 
 Sistemas y Tecnologias Web, ETSII, Universidad de la Laguna.
-
