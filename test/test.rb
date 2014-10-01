@@ -13,15 +13,15 @@ end
 
 #Carga de variables para los test
 
-before :all do
-
-	@usuario1 = "sokartema"
-	@usuario2 = "nook1etrolltime"
-	@usuario3 = "sokartemafalso"
-	
-end	
  
 describe "Tests de pagina web y twitter" do
+	before :all do
+
+		@usuario1 = "sokartema"
+		@usuario2 = "nook1etrolltime"
+		@usuario3 = "sokartemafalso"
+	
+	end	
 
 	it "Carga de la web desde el servidor" do
 		get '/'
