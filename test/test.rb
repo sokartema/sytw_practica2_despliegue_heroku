@@ -11,29 +11,32 @@ def app
 end
 
 
- 
-describe "Tests de pagina web y twitter" do
+#Carga de variables para los test
 
-	before :all do
+before :all do
 
 	@usuario1 = "sokartema"
 	@usuario2 = "nook1etrolltime"
 	@usuario3 = "sokartemafalso"
 	
-
-    end	
-    
+end	
+ 
+describe "Tests de pagina web y twitter" do
 
 	it "Carga de la web desde el servidor" do
 		get '/'
 		assert last_response.ok?	
 	end
-
+	
 	it "Comprueba el titulo de la pagina" do
 		get '/'
 		assert last_response.body.include?("<title>Inicio</title>"), "El titulo tiene que ser: Inicio"
 	end
 
+	it "Comprueba el contenido del cuadro de texto" do
+		get '/'
+		#assert last_response.body.include?("NºAmigos a mostrar (max 10)"), "El contenido tiene que estar en la web"
+	end
 
 end
 
