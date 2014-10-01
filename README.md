@@ -8,6 +8,8 @@ Esta aplicación permite saber cual de los amigos(following) de una persona de t
 
 Este proyecto ha sido implementado para el despliegue en heroku y contiene tests con seguimiento en travis.
 
+Proyecto en Heroku: http://sytw-practica2.herokuapp.com/
+
 ### Modificaciones ultima practica
 
 - Añadidas severas funcionalidades json. Ahora cada vez que se carga un usuario de twitter, la informacion de este y sus following se guarda en un fichero json.
