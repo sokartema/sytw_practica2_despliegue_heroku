@@ -21,7 +21,8 @@ describe "Tests de la pagina raiz ('/') con metodo get" do
 		@textoTitulo="<title>Inicio</title>"
 		@textoCabecera="Twitter Most Popular Friend"
 		@textoContenido="NºAmigos a mostrar (max 10)"
-		@css="../public/css/lavish-bootstrap.css"
+		@css="/public/css/lavish-bootstrap.css"
+		#@css2="/home/nook1e/Documentos/SYTW/followers/practica3/sytw_practica2_despliegue_heroku/"
 	end
 
 	it "Carga de la web desde el servidor" do
@@ -58,7 +59,13 @@ describe "Tests de la pagina raiz ('/') con metodo get" do
 	end
 
 	it "Comprueba si esta el CSS en el servidor" do
-		assert File.exists?(@css), "Debe estar el CSS en el servidor"
+
+		path = File.absolute_path(__FILE__)
+		path=path+@css
+		path=path.split('/test/test.rb')
+		path=path[0]+path[1]
+
+		assert File.exists?(path), "Debe estar el CSS en el servidor"
 	end
 
 end
